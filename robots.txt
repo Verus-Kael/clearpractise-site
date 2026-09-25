@@ -1,0 +1,19 @@
+# Clear Practise Robots.txt
+# Last Updated: April 10, 2026
+
+User-agent: *
+Allow: /
+
+# Disallow internal/backend paths
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /logs/
+Disallow: /tmp/
+Disallow: /var/
+Disallow: /auth/
+Disallow: /health
+Disallow: /*.log$
+Disallow: /*.bak$
+
+# Sitemap location
+Sitemap: https://clearpractise.com/sitemap.xml
