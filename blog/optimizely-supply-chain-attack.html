@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Optimizely Supply Chain Attack, Explained | CPWS</title>
+<meta name="description" content="On 16 November 2026 the BBC, CNN, HSBC and 175 other organisations served malicious code to visitors. None of them were hacked. Here is what happened, and what it means for your business.">
+<link rel="canonical" href="https://clearpractise.com/blog/optimizely-supply-chain-attack.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Optimizely Supply Chain Attack, Explained | CPWS">
+<meta property="og:description" content="178 organisations served malicious code through a script they chose to trust. None of their servers were breached. What it means for your business.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "The Optimizely Supply Chain Attack, Explained",
+  "datePublished": "2026-11-19",
+  "publisher": { "@type": "Organization", "name": "CPWS" }
+}
+</script>
+<style>
+  :root { --bg:#0d0f14; --text:#e8e9ec; --muted:#8a8f9a; --accent:#6d4aff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  main { max-width:42rem; margin:0 auto; padding:5rem 2rem 3rem; }
+  h1 { font-size:1.9rem; letter-spacing:0.02em; margin-bottom:0.75rem; }
+  .deck { color:var(--muted); font-size:1.05rem; margin-bottom:2.5rem; }
+  h2 { font-size:1.2rem; margin:2.25rem 0 0.75rem; color:var(--accent); }
+  p { margin-bottom:1rem; }
+  ul, ol { padding-left:1.4rem; margin-bottom:1rem; }
+  li { margin-bottom:0.5rem; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
+  .meta { color:var(--muted); font-size:0.9rem; margin-bottom:2rem; }
+  blockquote { border-left:3px solid var(--accent); padding-left:1rem; margin:1.25rem 0; color:var(--muted); font-style:italic; }
+  code { background:#161a22; padding:0.15rem 0.4rem; border-radius:4px; font-size:0.9em; }
+  .sources { border-top:1px solid #1f232d; padding-top:1rem; margin-top:2.5rem; font-size:0.9rem; color:var(--muted); }
+  .sources a { color:var(--muted); text-decoration:underline; text-underline-offset:3px; }
+  .affblock { border:1px solid #1f232d; border-radius:8px; padding:1.25rem 1.5rem; margin:2.25rem 0; }
+  .affblock h3 { font-size:1rem; margin-bottom:0.75rem; color:var(--text); }
+  .affblock a.btn { display:block; padding:0.7rem 1.2rem; border:1px solid var(--accent); border-radius:6px; color:var(--accent); text-align:center; margin-bottom:0.6rem; font-weight:600; }
+  .affblock a.btn:hover { background:#161a22; text-decoration:none; }
+  .affblock .disclosure { font-size:0.8rem; color:var(--muted); margin-top:0.5rem; }
+  /* site nav */
+  header.site { position:absolute; top:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; padding:1.1rem 1.5rem; z-index:10; }
+  header.site .brand { color:var(--text); text-decoration:none; font-weight:700; letter-spacing:0.08em; font-size:1.05rem; }
+  header.site .brand:hover { color:var(--accent); }
+  .nav-toggle { display:none; }
+  .nav-btn { display:none; width:42px; height:38px; cursor:pointer; position:relative; }
+  .nav-btn span { position:absolute; top:18px; left:9px; right:9px; height:2px; background:var(--text); transition:transform .2s ease, background .2s ease; }
+  .nav-btn span::before, .nav-btn span::after { content:""; position:absolute; left:0; right:0; height:2px; background:var(--text); transition:transform .2s ease; }
+  .nav-btn span::before { top:-8px; }
+  .nav-btn span::after { top:8px; }
+  header.site nav { display:flex; gap:1.4rem; }
+  header.site nav a { color:var(--muted); text-decoration:none; font-size:0.95rem; }
+  header.site nav a:hover { color:var(--text); }
+  header.site nav a.current { color:var(--accent); }
+  @media (max-width:720px) {
+    .nav-btn { display:block; }
+    header.site nav { display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; gap:0; background:var(--bg); border-bottom:1px solid #1f232d; }
+    .nav-toggle:checked ~ nav { display:flex; }
+    header.site nav a { padding:0.8rem 1.5rem; }
+    header.site nav a:hover { background:#161a22; color:var(--text); }
+    .nav-toggle:checked ~ .nav-btn span { background:transparent; }
+    .nav-toggle:checked ~ .nav-btn span::before { transform:translateY(8px) rotate(45deg); }
+    .nav-toggle:checked ~ .nav-btn span::after { transform:translateY(-8px) rotate(-45deg); }
+  }
+  footer { max-width:42rem; margin:0 auto; padding:1.5rem 2rem; border-top:1px solid #1f232d; font-size:0.85rem; color:var(--muted); }
+  footer nav { margin-bottom:0.5rem; }
+  footer nav a { color:var(--muted); margin-right:1rem; text-decoration:underline; text-underline-offset:3px; }
+</style>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="/">CPWS</a>
+  <input type="checkbox" id="navtog" class="nav-toggle">
+  <label class="nav-btn" for="navtog" aria-label="Menu"><span></span></label>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/blog/" class="current">Writing</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy-policy.html">Privacy</a>
+  </nav>
+</header>
+<main>
+<article>
+<h1>The Optimizely Supply Chain Attack, Explained</h1>
+<p class="meta">19 November 2026 | CPWS</p>
+<p class="deck">On 16 November 2026, visitors to the BBC, CNN, HSBC, Zoom and at least 175 other organisations were served malicious code. Not one of those organisations was hacked. If you run a business website, this is the story you need to understand before it happens to your customers.</p>
+
+<h2>What happened</h2>
+<p>On 16 November 2026, an attacker found a weakness in the signup flow of Optimizely, a widely used A/B testing platform that thousands of websites embed as a script on every page. Identified as CVE-2026-132224, the flaw let the attacker write their own code into the "Project JavaScript" field of other people's accounts.</p>
+<p>Because that field is trusted, the attacker's code was served straight to visitors from Optimizely's own content delivery network, <code>cdn.optimizely.com</code>, under Optimizely's valid security certificate. To every browser on earth, it looked exactly like the real thing. It was the real thing, in a sense: the same server, same certificate, same file, poisoned contents.</p>
+<p>Security researcher Scott Helme and his team at Report URI scanned 1,611 Optimizely snippets and found 188 carrying the malicious code, tied to at least 178 organisations. Alongside the BBC, CNN and HSBC sat Zoom, Salesforce, GitLab, IKEA, Equifax, Ledger, Air France-KLM, Fox News and Peacock. The true number is believed to be higher.</p>
+
+<h2>What the code did</h2>
+<p>Three payloads, running on some of the most visited sites in the world:</p>
+<ul>
+<li><strong>Card skimming.</strong> When a visitor typed card details into a site's own payment forms, the code grabbed the number, expiry date and CVV before the legitimate payment processor ever saw them. Cards entered through a separate payment provider's embedded form, such as a hosted checkout, were out of reach.</li>
+<li><strong>Cryptocurrency address swaps.</strong> Where visitors could pay in crypto, the code substituted the destination wallet address for the attacker's.</li>
+<li><strong>An iPhone exploit kit.</strong> On iPhones and iPads running iOS 18.6 or older, affected pages quietly reloaded every 60 seconds while the exploit chain ran.</li>
+</ul>
+<p>Optimizely confirmed the incident on its status page and removed the injected code; Report URI reported all monitored snippets clean by 23:11 UTC on 16 November. But every card typed into an affected site's own form that day should be treated as potentially exposed, and Report URI has advised site owners to consider telling their customers so.</p>
+
+<h2>Why nobody's firewall helped</h2>
+<p>Here is the uncomfortable part. The BBC's security teams are among the best funded in the world. It made no difference, because nothing came through their defences. The malicious code arrived through a door the BBC had opened deliberately, years earlier, by pasting a snippet of Optimizely JavaScript into its pages.</p>
+<blockquote>A website can be compromised through a third-party dependency without its own code or infrastructure ever being breached. That is the entire trick.</blockquote>
+<p>Every script your site loads from someone else is a standing invitation: "run this code on my pages, whatever it contains, whoever wrote it today." You vetted the vendor when you signed up. You did not vet this morning's version of the file. That is the gap the attacker walked through, and it exists on millions of sites right now.</p>
+<p>There is early evidence this was not confined to one vendor. Researchers at Hudson Rock traced the same delivery pattern to three further script services, Kissmetrics, StorifyMe and minute-ly, with tampered responses recorded as early as 13 November. Expect more of these. The economics favour the attacker: compromise one script provider and you inherit hundreds of trusted relationships at once.</p>
+
+<h2>What to do if your business embeds third-party scripts</h2>
+<ol>
+<li><strong>Inventory your scripts.</strong> You cannot secure what you have not counted. Load your homepage with your browser's developer tools open and list every domain that is not yours.</li>
+<li><strong>Justify each one.</strong> For every script, ask: what revenue or function does this earn, and what happens if that vendor is compromised this week? Chat widgets, analytics, session replay, heat maps, A/B testing: each is a door.</li>
+<li><strong>Remove what you can.</strong> Most sites carry scripts nobody remembers installing. They all go.</li>
+<li><strong>Constrain what stays.</strong> A Content-Security-Policy header limits where scripts may load from, and Subresource Integrity ties a script to a hash of its expected contents, so a swapped file refuses to run. Neither is a cure, but both raise the cost of attacking you.</li>
+<li><strong>Re-check your payment flow.</strong> If your customers type card details into forms on your own domain, that is the highest-value target on your site. A hosted checkout page from your payment provider puts that risk where it is professionally defended.</li>
+<li><strong>Talk to your web people.</strong> If someone else runs your site, ask them one question: "How many third-party scripts do we load, and can you name them?" If they cannot answer, you have learned something important about them.</li>
+</ol>
+
+<h2>The design choice</h2>
+<p>Nothing online is unhackable, and CPWS will not pretend otherwise. But attack surface is a design choice. Every third-party script you remove is a supply chain you are no longer part of, a vendor's signup-flow vulnerability you no longer have to hope was patched. The organisations hit on 16 November did not choose weak passwords or ignore updates; they chose convenience, one snippet at a time, over years.</p>
+<p>We build the other way: lean stacks, minimal dependencies, and no strangers in your stack. If that trade-off appeals to you, have a look at <a href="/blog/how-we-isolate.html">how we isolate every client instance</a>, or read our piece on <a href="/blog/hidden-risks-mainstream-hosting.html">the hidden risks of mainstream hosting</a>.</p>
+
+<div class="affblock">
+<h3>Tools we use ourselves</h3>
+<a class="btn" href="https://go.getproton.me/aff_c?offer_id=50&amp;aff_id=17205&amp;url_id=1484" rel="sponsored nofollow" target="_blank">Proton Workspace for Business</a>
+<p>Encrypted email, calendar, docs and drive under one business account, GDPR-friendly and Swiss-hosted. This is what we run CPWS on.</p>
+<a class="btn" href="https://go.getproton.me/aff_c?offer_id=26&amp;aff_id=17205" rel="sponsored nofollow" target="_blank">Proton Unlimited (personal)</a>
+<p class="disclosure">Disclosure: these are affiliate links. If you sign up through them, we may earn a commission at no extra cost to you. We only recommend services we pay for ourselves.</p>
+</div>
+
+<div class="sources">
+<p><strong>Sources:</strong> Report URI, "World's Largest Brands Infected With Malware Via Optimizely" (16 Nov 2026); Help Net Security (17 Nov 2026); Malwarebytes (17 Nov 2026); McAfee (18 Nov 2026); Bitsight, "Optimizely CVE-2026-132224"; BlackKite. Figures are as reported by these analyses; counts may rise as research continues.</p>
+</div>
+</article>
+</main>
+<footer>
+<nav><a href="/">Home</a><a href="/blog/">Writing</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/privacy-policy.html">Privacy</a><a href="/terms-of-service.html">Terms</a></nav>
+<p>&copy; 2026 CPWS - Secure Web Stacks</p>
+</footer>
+</body>
+</html>
+
