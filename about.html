@@ -1,59 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Clear Practise</title>
-    <meta name="description" content="Clear Practise is a privacy-first web creation and hosting service built on sovereign infrastructure. We judge ourselves by our work, not our face.">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; background: #fff; }
-        nav { background: #2c3e50; padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
-        nav .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        nav .logo { color: #87CEEB; font-weight: bold; font-size: 1.3rem; text-decoration: none; }
-        nav ul { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
-        nav ul li a { color: #fff; text-decoration: none; font-size: 0.95rem; }
-        nav ul li a:hover { color: #87CEEB; }
-        @media (max-width: 768px) { nav ul { display: none; } }
-        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-        h1 { color: #2c3e50; margin-bottom: 30px; font-size: 2.2rem; }
-        h2 { color: #2c3e50; margin-top: 30px; margin-bottom: 15px; font-size: 1.8rem; }
-        p { margin-bottom: 15px; font-size: 1.1rem; }
-        .quote { background: #eef9ff; border-left: 4px solid #87CEEB; padding: 25px; margin: 30px 0; font-size: 1.2rem; font-style: italic; color: #2c3e50; border-radius: 0 8px 8px 0; }
-        footer { background: #2c3e50; color: #fff; padding: 18px 0; text-align: center; margin-top: 60px; }
-        footer a { color: #87CEEB; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | CPWS</title>
+<meta name="description" content="CPWS builds highly secure, minimal-dependency web stacks. Who we are, how we work, and why attack surface is a design choice.">
+<style>
+  :root { --bg:#0d0f14; --text:#e8e9ec; --muted:#8a8f9a; --accent:#6d4aff; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+  main { max-width:42rem; margin:0 auto; padding:4rem 2rem; }
+  h1 { font-size:2rem; letter-spacing:0.03em; margin-bottom:1.5rem; }
+  h2 { font-size:1.2rem; margin:2rem 0 0.5rem; color:var(--accent); }
+  p { margin-bottom:1rem; color:var(--text); }
+  .muted { color:var(--muted); }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; text-underline-offset:3px; }
+  nav { max-width:42rem; margin:0 auto; padding:1.5rem 2rem 0; font-size:0.95rem; }
+  nav a { color:var(--muted); margin-right:1.5rem; }
+  nav a:hover { color:var(--text); }
+  footer { max-width:42rem; margin:3rem auto 0; padding:1.5rem 2rem; border-top:1px solid #1f232d; font-size:0.85rem; color:var(--muted); }
+</style>
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <a href="/" class="logo">Clear Practise</a>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container">
-        <h1>About Clear Practise</h1>
-        <p>Clear Practise exists for one reason: the people who do the most sensitive work in society — therapists, counselors, journalists, whistleblowers, wellness practitioners — are being served by an internet built to exploit them.</p>
-        <p>Your clients trust you with their deepest struggles. Then that trust flows into a website running on shared hosting, feeding tracking pixels, analytics harvesters, and data brokers. That is not a privacy policy problem. It is an architecture problem.</p>
+<nav><a href="/">Home</a><a href="/blog/">Blog</a><a href="/contact.html">Contact</a></nav>
+<main>
+<h1>About CPWS</h1>
+<p>CPWS builds highly secure, minimal-dependency web stacks for businesses that can't afford to be the next headline.</p>
 
-        <h2>What We Do</h2>
-        <p>We build and host privacy-first websites for practices that cannot afford leaks. Sovereign infrastructure in the EEA. Zero third-party tracking. GDPR compliance by design, not by disclaimer. Every client site runs in its own isolated, encrypted container — no shared databases, no noisy neighbours.</p>
+<h2>Why we exist</h2>
+<p>This year, major brands were breached through the third-party scripts they chose to embed. Most web agencies sell convenience and bolt on security afterwards. We start from the opposite end: fewer dependencies, fewer doors, no strangers in your stack.</p>
 
-        <h2>Why Anonymous?</h2>
-        <div class="quote">"We judge ourselves by our work, not our face."</div>
-        <p>Clear Practise's founder chooses to remain anonymous while the business is being built. Not to hide from accountability — the opposite. In a market where competitors harvest their users' data, anonymity is a statement of what we don't collect, don't sell, and don't need. Our clients interact with the work itself: the infrastructure, the security, the support. When you contact Clear Practise, you reach a human being directly. No ticket queues. No call centres.</p>
+<h2>How we work</h2>
+<p>Lean, hardened infrastructure. Isolated instances. Data hosted in the EEA. No third-party analytics on the sites we build, and no data mining, ever. We are judged by our work, not our marketing.</p>
 
-        <h2>Our Promise</h2>
-        <p>Your life can change without your privacy being the price.</p>
-        <p>Everything we build — hosting, web design, compliance — exists to honour that sentence. No exceptions.</p>
+<h2>Honesty first</h2>
+<p>Nothing online is unhackable. Attack surface, however, is a design choice. We won't promise you the impossible; we'll build you the smallest, hardest target we can.</p>
 
-        <p><a href="/contact.html" style="color:#2c9bc7;">Get in touch to discuss your practice.</a></p>
-    </div>
-    <footer><div class="container">&copy; 2026 Clear Practise. All rights reserved.</div></footer>
+<p class="muted">Early enquiries welcome: <a href="mailto:enquiries@clearpractise.com">enquiries@clearpractise.com</a></p>
+</main>
+<footer>&copy; 2026 CPWS &mdash; Secure Web Stacks</footer>
 </body>
 </html>
