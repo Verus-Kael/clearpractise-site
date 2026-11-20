@@ -4,73 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About | CPWS</title>
-<meta name="description" content="CPWS builds highly secure, minimal-dependency web stacks. Who we are, how we work, and why attack surface is a design choice.">
+<meta name="description" content="CPWS builds and hosts websites, runs full IT and web services, performs security audits, and builds hardened servers for larger organisations.">
 <style>
   :root { --bg:#0d0f14; --text:#e8e9ec; --muted:#8a8f9a; --accent:#6d4aff; }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
-  main { max-width:42rem; margin:0 auto; padding:4rem 2rem; }
-  h1 { font-size:2rem; letter-spacing:0.03em; margin-bottom:1.5rem; }
-  h2 { font-size:1.2rem; margin:2rem 0 0.5rem; color:var(--accent); }
-  p { margin-bottom:1rem; color:var(--text); }
-  .muted { color:var(--muted); }
+  main { max-width:42rem; margin:0 auto; padding:5rem 2rem 3rem; }
+  h1 { font-size:2rem; letter-spacing:0.03em; margin-bottom:0.75rem; }
+  .deck { color:var(--muted); font-size:1.05rem; margin-bottom:2rem; }
+  h2 { font-size:1.15rem; margin:2rem 0 0.6rem; color:var(--accent); }
+  p { margin-bottom:1rem; }
+  ul { padding-left:1.25rem; margin-bottom:1rem; }
+  li { margin-bottom:0.45rem; }
   a { color:var(--accent); text-decoration:none; }
   a:hover { text-decoration:underline; text-underline-offset:3px; }
+  .muted { color:var(--muted); font-size:0.9rem; }
   nav { max-width:42rem; margin:0 auto; padding:1.5rem 2rem 0; font-size:0.95rem; }
   nav a { color:var(--muted); margin-right:1.5rem; }
   nav a:hover { color:var(--text); }
   footer { max-width:42rem; margin:3rem auto 0; padding:1.5rem 2rem; border-top:1px solid #1f232d; font-size:0.85rem; color:var(--muted); }
-
-  /* site nav */
-  header.site { position:absolute; top:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; padding:1.1rem 1.5rem; z-index:10; }
-  header.site .brand { color:var(--text); text-decoration:none; font-weight:700; letter-spacing:0.08em; font-size:1.05rem; }
-  header.site .brand:hover { color:var(--accent); }
-  .nav-toggle { display:none; }
-  .nav-btn { display:none; width:42px; height:38px; cursor:pointer; position:relative; }
-  .nav-btn span { position:absolute; top:18px; left:9px; right:9px; height:2px; background:var(--text); transition:transform .2s ease, background .2s ease; }
-  .nav-btn span::before, .nav-btn span::after { content:""; position:absolute; left:0; right:0; height:2px; background:var(--text); transition:transform .2s ease; }
-  .nav-btn span::before { top:-8px; }
-  .nav-btn span::after { top:8px; }
-  header.site nav { display:flex; gap:1.4rem; }
-  header.site nav a { color:var(--muted); text-decoration:none; font-size:0.95rem; }
-  header.site nav a:hover { color:var(--text); }
-  header.site nav a.current { color:var(--accent); }
-  @media (max-width:720px) {
-    .nav-btn { display:block; }
-    header.site nav { display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; gap:0; background:var(--bg); border-bottom:1px solid #1f232d; }
-    .nav-toggle:checked ~ nav { display:flex; }
-    header.site nav a { padding:0.8rem 1.5rem; }
-    header.site nav a:hover { background:#161a22; color:var(--text); }
-    .nav-toggle:checked ~ .nav-btn span { background:transparent; }
-    .nav-toggle:checked ~ .nav-btn span::before { transform:translateY(8px) rotate(45deg); }
-    .nav-toggle:checked ~ .nav-btn span::after { transform:translateY(-8px) rotate(-45deg); }
-  }
 </style>
 </head>
 <body>
-<header class="site">
-  <a class="brand" href="/">CPWS</a>
-  <input type="checkbox" id="navtog" class="nav-toggle">
-  <label class="nav-btn" for="navtog" aria-label="Menu"><span></span></label>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/blog/">Writing</a>
-    <a href="/about.html" class="current">About</a>
-    <a href="/contact.html">Contact</a><a href="/privacy-policy.html">Privacy</a>
-  </nav>
-</header>
+<nav><a href="/">Home</a><a href="/blog/">Writing</a><a href="/contact.html">Contact</a></nav>
 <main>
 <h1>About CPWS</h1>
-<p>CPWS builds highly secure, minimal-dependency web stacks for businesses that can't afford to be the next headline.</p>
+<p class="deck">We build websites and we host them. We run full IT and web services for businesses that want their technology handled properly.</p>
 
-<h2>Why we exist</h2>
-<p>This year, major brands were breached through the third-party scripts they chose to embed. Most web agencies sell convenience and bolt on security afterwards. We start from the opposite end: fewer dependencies, fewer doors, no strangers in your stack.</p>
+<h2>Our main offer: websites and hosting</h2>
+<p>We design and build websites, and we host them on hardened, minimal-dependency infrastructure. If you already have a site somewhere else, we migrate it for you at no charge as part of onboarding. You get a site that loads fast, carries nothing it doesn't need, and lives on servers we look after like they were ours - because they are.</p>
+
+<h2>Everything else we do</h2>
+<ul>
+<li><strong>Security audits</strong> - a hard look at your current setup: what you run, what it exposes, what's out of date, what an attacker would try first. Written findings, plain English, prioritised fixes.</li>
+<li><strong>Server builds</strong> - custom hardened servers for larger companies: designed, built, documented, and handed over or managed by us. The same stack philosophy we run our own platform on.</li>
+<li><strong>Full IT and web services</strong> - ongoing work across the breadth of business technology: domains, email, migrations, integrations, maintenance. If it connects a business to the internet, we deal with it.</li>
+</ul>
+
+<h2>Who we do it for</h2>
+<p>Anyone with a website. Small businesses that need a proper home for their first site. Established companies whose hosting hasn't been thought about in years. Larger organisations that need a server built to a standard their internal team doesn't have time to research. Practices and professionals who handle sensitive client data and can't afford a breach.</p>
 
 <h2>How we work</h2>
-<p>Lean, hardened infrastructure. Isolated instances. Data hosted in the EEA. No third-party analytics on the sites we build, and no data mining, ever. We are judged by our work, not our marketing.</p>
+<p>Lean, hardened infrastructure. Isolated systems. Data hosted in the EEA. No third-party analytics on the sites we build, and no data mining, ever. Direct access to the person doing the work - no ticket queues, no junior hand-offs.</p>
 
 <h2>Honesty first</h2>
-<p>Nothing online is unhackable. Attack surface, however, is a design choice. We won't promise you the impossible; we'll build you the smallest, hardest target we can.</p>
+<p>Nothing online is bulletproof. But every script, tracker and plug-in you don't load is one less thing that can hurt you. We won't promise you the impossible; we'll build you the smallest, hardest target we can, and tell you honestly what's left.</p>
 
 <p class="muted">Early enquiries welcome: <a href="mailto:enquiries@clearpractise.com">enquiries@clearpractise.com</a></p>
 </main>
