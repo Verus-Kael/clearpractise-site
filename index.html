@@ -80,6 +80,17 @@
     .nav-toggle:checked ~ .nav-btn span::before { transform:translateY(8px) rotate(45deg); }
     .nav-toggle:checked ~ .nav-btn span::after { transform:translateY(-8px) rotate(-45deg); }
   }
+  /* footer + offer */
+  .offer { margin-top:1.4rem; font-size:1rem; }
+  .links { margin-top:1.5rem; font-size:0.85rem; }
+  .links p { margin:0.3rem 0; }
+  .links a { color:var(--muted); text-decoration:underline; text-underline-offset:3px; }
+  .links a:hover { color:var(--text); }
+  footer nav { margin-top:1rem; font-size:0.85rem; }
+  footer nav a { color:var(--muted); text-decoration:none; margin:0 0.4rem; }
+  footer nav a:hover { color:var(--accent); }
+  footer .disclosure { margin-top:0.8rem; font-size:0.75rem; opacity:0.6; font-style:italic; }
+  footer .copyright { margin-top:0.4rem; font-size:0.75rem; opacity:0.6; }
 </style>
 </head>
 <body>
@@ -98,12 +109,25 @@
   <h1>CPWS</h1>
   <p class="tagline">Highly secure web stacks for businesses that can't afford to be the next headline.</p>
   <p class="sub">This year, some of the world's biggest brands were breached through the third-party scripts they chose to embed. We build lean, hardened infrastructure: fewer dependencies, fewer doors, no strangers in your stack.</p>
-  <p class="sub"><em>Nothing online is unhackable. Attack surface, however, is a design choice.</em></p>
+  <p class="sub"><em>Nothing online is bulletproof. But every script, tracker and plug-in you don't load is one less thing that can hurt you.</em></p>
   <span class="soon">Now taking early enquiries</span>
+  <p class="offer">We build websites and we host them - properly secured, minimal dependencies. And if you've already got a site somewhere else, we'll move it here for free as part of our onboarding offer.</p>
   <p class="contact">Early enquiries welcome: <a href="mailto:enquiries@clearpractise.com">enquiries@clearpractise.com</a></p>
 </main>
 <footer>
-  <p><a href="https://go.getproton.me/aff_c?offer_id=26&amp;aff_id=17205&amp;url_id=1198" rel="sponsored nofollow">Proton Unlimited Black Friday Deals</a> (affiliate)</p>
+  <div class="links">
+    <p><a href="https://go.getproton.me/aff_c?offer_id=26&amp;aff_id=17205&amp;url_id=1198" rel="sponsored nofollow">Proton Unlimited - Black Friday Deals</a></p>
+    <p><a href="https://go.getproton.me/aff_c?offer_id=50&amp;aff_id=17205&amp;url_id=1484" rel="sponsored nofollow">Proton Workspace for Business</a></p>
+    <p><a href="https://go.getproton.me/aff_c?offer_id=50&amp;aff_id=17205&amp;url_id=1126" rel="sponsored nofollow">Proton Mail Business - Free Trial</a></p>
+  </div>
+  <nav>
+    <a href="/blog/">Writing</a> |
+    <a href="/about.html">About</a> |
+    <a href="/contact.html">Contact</a> |
+    <a href="/privacy-policy.html">Privacy</a>
+  </nav>
+  <p class="disclosure">Some links on this page are affiliate links - we only recommend tools we use and pay for ourselves.</p>
+  <p class="copyright">&copy; 2026 CPWS - Secure Web Stacks</p>
 </footer>
 </body>
 </html>
