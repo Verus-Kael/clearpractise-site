@@ -54,3 +54,4 @@ December BF link rotation.
 - Hand-typed long content: heredoc in two parts, verify tails (</html>)
 - End of session: update this file
 - Copy doctrine: satisfy the tech AND arm the manager to champion it (translation layer built in)
+- 21 Nov PM: Hetzner order (i7-7700 HEL1, EUR98.04, SB auction) in manual fraud review - awaiting approval, then first-boot hardening per foundation checklist. Site state: all live, tree clean through 7dedfa8.
